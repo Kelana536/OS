@@ -1,0 +1,24 @@
+# Build outputs and artifacts
+builds/
+*.o
+*.bin
+*.img
+*.iso
+
+# Virtual disk and locks
+virtual_disk
+virtual_disk.lock
+builds/virtual_disk
+builds/virtual_disk.lock
+builds/bochsout.txt
+builds/bochsrc.bxrc
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+
+# OS files
+.DS_Store
